@@ -14,10 +14,10 @@ void ActiveObjectEngine::Run()
         if (isPause())
             continue;
         
-        Command* cmd = cmds.front();
-        if (cmd != NULL)
+        Command* pCmd = cmds.front();
+        if (pCmd != NULL)
         { 
-            cmd->Exectue();
+            pCmd->Exectue();
         }
         cmds.pop_front();
     }
