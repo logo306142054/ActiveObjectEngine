@@ -22,7 +22,22 @@ public:
 private:
 };
 
+class ExecOnce : public Command
+{
+public:
+    ExecOnce(ActiveObjectEngine & engine) : m_engine(engine)
+    {
 
+    }
+    
+    // Í¨¹ý Command ¼Ì³Ð
+    virtual void Exectue() override
+    {
+        printf("execute once\n");
+    }
+private:
+    ActiveObjectEngine &m_engine;
+};
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -32,7 +47,12 @@ int _tmain(int argc, _TCHAR* argv[])
     FuncCommand f2('b', 3, 2, engine);
     FuncCommand f3('c', 4, 3, engine);
     FuncCommand f4('d', 1, 1, engine);
-    StopCommand sc(10, engine);
+    StopCommand sc(12, engine);
+    FuncCommand f5('e', 0, 5, engine);
+
+    ExecOnce once(engine);
+    SleepCommand s2(5, engine, once);
+    engine.AddCommand(s2);
 
     engine.SetState(START);
     engine.Run();
