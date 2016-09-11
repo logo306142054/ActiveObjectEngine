@@ -25,11 +25,14 @@ protected:
 
 private:
     bool IsExecWithoutDelay();
-    void AddToEngine();
+    void AddToEngine(Command & cmd);
+    void AddToEngineWithoutDelay();
+    void AddToEngineWithDelay();
+
 protected:
     BYTE m_sleepTime;
     BYTE m_delayTime;
     ActiveObjectEngine & m_engine;
-    SleepCommand *m_sleepOwn;
+    SleepCommand *m_pSleepOwn;
 };
 #endif

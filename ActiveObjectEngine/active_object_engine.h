@@ -1,6 +1,6 @@
 #ifndef _ACTIVEE_OBJECT_ENGINE_H_
 #define _ACTIVEE_OBJECT_ENGINE_H_
-
+#include "command.h"
 #include <list>
 
 enum E_STATE 
@@ -20,7 +20,7 @@ public:
 
     ~ActiveObjectEngine();
 
-    void AddCommand(Command & pCmd);
+    void AddCommand(Command & cmd);
 
     void Run();
 

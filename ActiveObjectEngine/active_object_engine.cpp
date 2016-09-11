@@ -2,18 +2,18 @@
 #include "command.h"
 
 
-void ActiveObjectEngine::AddCommand(Command & pCmd)
+void ActiveObjectEngine::AddCommand(Command & cmd)
 {
-    cmds.push_back(&pCmd);
+    cmds.push_back(&cmd);
 }
 
 void ActiveObjectEngine::Run()
 {
-    while (!isStop())
+    while (!isStop() && !cmds.empty())
     {
         if (isPause())
             continue;
-
+        
         Command* cmd = cmds.front();
         if (cmd != NULL)
         { 
