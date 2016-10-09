@@ -24,22 +24,52 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="command.h">
+    <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="func_command.h">
+    <ClInclude Include="taskschedule\prih\window_thread_creator.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="sleep_command.h">
+    <ClInclude Include="taskschedule\pubh\active_object_engine.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="active_object_engine.h">
+    <ClInclude Include="taskschedule\pubh\command_if.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="delay_and_repeat.h">
+    <ClInclude Include="taskschedule\pubh\delay_and_repeat.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="define.h">
+    <ClInclude Include="taskschedule\pubh\runnable_if.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="taskschedule\pubh\sleep_command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="taskschedule\pubh\smart_prt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="taskschedule\pubh\thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="semaphone\pubh\comm_semephore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pubh\action_id.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pubh\message.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pubh\to_string_if.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pubh\define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pubh\comm_type_def.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pubh\action_if.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,17 +80,25 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="func_command.cpp">
+    <ClCompile Include="taskschedule\port\window_thread_creator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sleep_command.cpp">
+    <ClCompile Include="taskschedule\source\active_object_engine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="active_object_engine.cpp">
+    <ClCompile Include="taskschedule\source\delay_and_repeat.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="delay_and_repeat.cpp">
+    <ClCompile Include="taskschedule\source\sleep_command.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="semaphone\source\comm_semaphore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ActiveObjectEngine.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

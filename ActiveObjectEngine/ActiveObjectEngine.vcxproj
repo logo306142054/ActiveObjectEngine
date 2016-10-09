@@ -51,6 +51,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\pubh;$(MSBuildProjectDirectory)\semaphone\pubh;$(MSBuildProjectDirectory)\taskschedule\pubh;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,25 +78,39 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="active_object_engine.h" />
-    <ClInclude Include="command.h" />
-    <ClInclude Include="define.h" />
-    <ClInclude Include="delay_and_repeat.h" />
-    <ClInclude Include="func_command.h" />
-    <ClInclude Include="sleep_command.h" />
+    <ClInclude Include="semaphone\pubh\comm_semephore.h" />
+    <ClInclude Include="pubh\action_id.h" />
+    <ClInclude Include="pubh\comm_type_def.h" />
+    <ClInclude Include="pubh\define.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="taskschedule\prih\window_thread_creator.h" />
+    <ClInclude Include="pubh\action_if.h" />
+    <ClInclude Include="taskschedule\pubh\active_object_engine.h" />
+    <ClInclude Include="taskschedule\pubh\command_if.h" />
+    <ClInclude Include="taskschedule\pubh\delay_and_repeat.h" />
+    <ClInclude Include="pubh\message.h" />
+    <ClInclude Include="taskschedule\pubh\runnable_if.h" />
+    <ClInclude Include="taskschedule\pubh\sleep_command.h" />
+    <ClInclude Include="taskschedule\pubh\smart_prt.h" />
+    <ClInclude Include="taskschedule\pubh\thread.h" />
+    <ClInclude Include="pubh\to_string_if.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="active_object_engine.cpp" />
-    <ClCompile Include="delay_and_repeat.cpp" />
-    <ClCompile Include="func_command.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="sleep_command.cpp" />
+    <ClCompile Include="semaphone\source\comm_semaphore.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="taskschedule\port\window_thread_creator.cpp" />
+    <ClCompile Include="taskschedule\source\active_object_engine.cpp" />
+    <ClCompile Include="taskschedule\source\delay_and_repeat.cpp" />
+    <ClCompile Include="taskschedule\source\sleep_command.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ActiveObjectEngine.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
